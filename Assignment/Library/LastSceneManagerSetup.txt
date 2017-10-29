@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Main Menu.unity
+=======
+- path: Assets/Scenes/Tutorial.unity
+>>>>>>> 2168330dfdb0b65028e22d18e82c9e28870c215a
   isLoaded: 1
   isActive: 1
