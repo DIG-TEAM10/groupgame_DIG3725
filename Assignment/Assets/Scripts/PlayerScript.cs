@@ -1,13 +1,40 @@
 ﻿using UnityEngine;
 
-public class PlayerScript : MonoBehaviour
-{
-    void Update()
-    {
-        var x = Input.GetAxis("Horizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("Vertical") * Time.deltaTime * 3.0f;
+public class PlayerScript : MonoBehaviour {
+    
+	public float speed = 10f;
+	Animator my_animator;
+	Rigidbody2D rb;
+	public float jumpheight = 2f;
+	bool isGrounded = true;
 
-        transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, z);
-    }
+	void Start () {
+		my_animator = GetComponent<Animator> ();
+		rb = GetComponent<Rigidbody2D>();
+	}
+
+	void Update (){
+		float moveHorizontal = Input.GetAxis ("Horizontal");
+		transform.position += new Vector3 (moveHorizontal, 0f, 0f) * Time.deltaTime * speed;
+
+		if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+			my_animator.SetTrigger ("IsJumping");
+			rb.velocity = new Vector2(0f, jumpheight);
+			isGrounded = false;
+	}
+		else if (moveHorizontal > 0) {
+			my_animator.SetTrigger ("IsWalking");
+			transform.localScale = new Vector3 (5f,5f,5f);
+		
+		}
+		else if(moveHorizontal < 0){
+			my_animator.SetTrigger ("IsWalking");
+			transform.localScale = new Vector3 (-5f,5f,5f);
+		} 
+
+		else {
+			my_animator.SetTrigger ("IsIdle");
+		}
+
+	}
 }
