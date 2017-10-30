@@ -17,20 +17,20 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 	
     public void LevelSelection(int levelNumber)
-    {
-        switch (levelNumber)
-        {
-            case (0):
-                break;
-            case (1):
-                break;
-            case (2):
-                break;
-            case (3):
-                break;
+	{
+		switch (levelNumber) {
+		case (0):
+			break;
+		case (1):
+			break;
+		case (2):
+			break;
+		case (3):
+			break;
 
 
 
-        }
+		}
 
+	}
 }
