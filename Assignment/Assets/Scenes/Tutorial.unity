@@ -164,9 +164,9 @@ GameObject:
   - component: {fileID: 83381317}
   - component: {fileID: 83381316}
   - component: {fileID: 83381315}
-  - component: {fileID: 83381314}
   - component: {fileID: 83381318}
   - component: {fileID: 83381319}
+  - component: {fileID: 83381314}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -174,8 +174,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!60 &83381314
-PolygonCollider2D:
+--- !u!61 &83381314
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -186,7 +186,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0038581695, y: 0.009645402}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -196,17 +196,9 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.08, y: 0.145}
-      - {x: -0.089999996, y: 0.114999995}
-      - {x: -0.08999997, y: -0.12767866}
-      - {x: -0.08000002, y: -0.12596452}
-      - {x: -0.042253207, y: -0.124859445}
-      - {x: 0.008578873, y: -0.12596451}
-      - {x: 0.04830408, y: -0.12690355}
-      - {x: 0.09146414, y: -0.12742878}
-      - {x: 0.089999996, y: 0.145}
+  serializedVersion: 2
+  m_Size: {x: 0.11826949, y: 0.27070916}
+  m_EdgeRadius: 0
 --- !u!50 &83381315
 Rigidbody2D:
   serializedVersion: 4
@@ -276,7 +268,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 83381313}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.93, y: 1.43, z: 0}
+  m_LocalPosition: {x: -0.83, y: 1.34, z: 0}
   m_LocalScale: {x: 5.1739354, y: 5.173936, z: 5.173936}
   m_Children: []
   m_Father: {fileID: 0}
@@ -530,7 +522,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 304347004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.4, y: 5, z: -10}
+  m_LocalPosition: {x: -0.83, y: 4.37, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1406,7 +1398,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1119226944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 1.25, z: 0}
+  m_LocalPosition: {x: 6.34, y: 13.28, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1650,7 +1642,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
