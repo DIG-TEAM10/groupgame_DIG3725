@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Tutorial.unity
-=======
-- path: Assets/Scenes/Options Menu.unity
->>>>>>> f103823b0470a53129920c9f8ee2879175edb3e4
   isLoaded: 1
   isActive: 1
