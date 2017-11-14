@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class WolfAttack : MonoBehaviour {
 
@@ -9,7 +11,8 @@ public class WolfAttack : MonoBehaviour {
 
 	Animator a;
 	GameObject player;
-	PlayerHealth ph;
+	public Slider pHealth;
+	public PlayerHealth ph;
 	WolfHealth wh;
 	bool inRange;
 	float timer;
@@ -25,10 +28,13 @@ public class WolfAttack : MonoBehaviour {
 		
 	}
 
-	void enter(Collider other)
+	void OnCollisionEnter2D (Collision2D other)
 	{
-		if (other.gameObject == player) {
+
+		print ("check2");
+		if (other.collider.CompareTag("Player")) {
 			inRange = true;
+			ph.takeDamage (damage);
 		}
 	}
 
@@ -62,6 +68,7 @@ public class WolfAttack : MonoBehaviour {
 		if (ph.currenthealth > 0) {
 
 			ph.takeDamage (damage);
+			pHealth.value -= 10;
 		}
 
 
