@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212082992668204264}
   - component: {fileID: 50843719945667436}
   - component: {fileID: 61323535790285442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground Middle (21)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 212420713758627354}
   - component: {fileID: 50486350223862124}
   - component: {fileID: 61827404717988786}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Small Ground (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 212602140276001770}
   - component: {fileID: 50936230634194932}
   - component: {fileID: 61429041836009112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Large Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 212001341495368452}
   - component: {fileID: 50801412243114820}
   - component: {fileID: 61950673393211462}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground Middle (22)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 212478132308879708}
   - component: {fileID: 50183311132630968}
   - component: {fileID: 61671341865913126}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground Middle (20)
   m_TagString: Ground
   m_Icon: {fileID: 0}
