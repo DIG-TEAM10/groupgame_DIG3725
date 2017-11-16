@@ -5,7 +5,8 @@ public class PlayerScript : MonoBehaviour {
 	public float speed = 10f;
 	Animator my_animator;
 	Rigidbody2D rb;
-	public float jumpheight = 2f;
+	[Range(1, 20)]
+	public float jumpVelocity;
 	bool isGrounded = true;
 
 	void Start () {
@@ -19,7 +20,7 @@ public class PlayerScript : MonoBehaviour {
 
 		if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
 			my_animator.SetTrigger ("IsJumping");
-			rb.velocity = new Vector2(0f, jumpheight);
+			rb.velocity = Vector2.up * jumpVelocity;
 			isGrounded = false;
 	}
 		else if (moveHorizontal > 0) {

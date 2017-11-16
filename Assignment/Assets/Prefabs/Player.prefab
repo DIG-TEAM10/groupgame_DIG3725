@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 95601536033806146}
   - component: {fileID: 114231890011302752}
   - component: {fileID: 61031324538877004}
+  - component: {fileID: 114197733922441242}
+  - component: {fileID: 114466544216593798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -38,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1575888261716870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.41, y: 1.28, z: 0}
+  m_LocalPosition: {x: 12.69, y: 13.62, z: 0}
   m_LocalScale: {x: 5.1739354, y: 5.173936, z: 5.173936}
   m_Children: []
   m_Father: {fileID: 0}
@@ -106,6 +108,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114197733922441242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575888261716870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e5c588c15e346b2a1fe1a384ba7563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullhealth: 100
+  currenthealth: 100
+  healthSlider: {fileID: 0}
+  damageImage: {fileID: 0}
+  damageSpeed: 5
+  flashColor: {r: 1, g: 0, b: 0.1, a: 1}
 --- !u!114 &114231890011302752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +137,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  jumpheight: 12
+  jumpVelocity: 13.2
+--- !u!114 &114466544216593798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575888261716870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9f303c13959486cab07415c2634870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 3
 --- !u!212 &212752149734082384
 SpriteRenderer:
   m_ObjectHideFlags: 1

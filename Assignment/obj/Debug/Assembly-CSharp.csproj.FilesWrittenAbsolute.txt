@@ -44,3 +44,5 @@
 /Users/ThomasField/Desktop/DIG3725/groupgame_DIG3725/Assignment/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/ThomasField/Desktop/DIG3725/groupgame_DIG3725/Assignment/Temp/bin/Debug/Assembly-CSharp.dll.mdb
 /Users/ThomasField/Desktop/DIG3725/groupgame_DIG3725/Assignment/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/ThomasField/Desktop/DIG3725/groupgame_DIG3725/Assignment/Temp/bin/Debug/Assembly-CSharp.pdb
+/Users/ThomasField/Desktop/DIG3725/groupgame_DIG3725/Assignment/obj/Debug/Assembly-CSharp.pdb
