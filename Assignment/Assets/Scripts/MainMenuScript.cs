@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class NewBehaviourScript : MonoBehaviour {
+public class MainMenuScript : MonoBehaviour {
 
     public GameObject NewGameButton;
     public GameObject OptionsButton;
