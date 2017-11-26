@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PlayerScript : MonoBehaviour
 	public Transform groundCheckPoint;
 	public float groundCheckRadius;
 	public LayerMask groundLayer;
+   
 
 
 	void Start()
@@ -49,6 +51,18 @@ public class PlayerScript : MonoBehaviour
 		}
 
 	}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("redheartpickuptag"))
+        {
+            other.gameObject.SetActive(false);
+        }
+
+        if(other.gameObject.CompareTag("goldcoinpickuptag"))
+        {
+            other.gameObject.SetActive(false);
+        }
+    }
 
 }
 

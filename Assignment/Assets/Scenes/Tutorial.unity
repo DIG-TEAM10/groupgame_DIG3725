@@ -445,6 +445,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 771e970d2b9ca214c99b381fe1a44ead, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &137378338 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1424743413319402, guid: 771e970d2b9ca214c99b381fe1a44ead,
+    type: 2}
+  m_PrefabInternal: {fileID: 137378337}
+--- !u!114 &137378339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 137378338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3d45710fe641994085d44a3d027c187, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &191287888
 Prefab:
   m_ObjectHideFlags: 0
@@ -2428,12 +2444,12 @@ Prefab:
     - target: {fileID: 224742922600548328, guid: 0c4c544a2de0447ea93048daf334a970,
         type: 2}
       propertyPath: m_LocalPosition.x
-      value: 373
+      value: 425
       objectReference: {fileID: 0}
     - target: {fileID: 224742922600548328, guid: 0c4c544a2de0447ea93048daf334a970,
         type: 2}
       propertyPath: m_LocalPosition.y
-      value: 194.5
+      value: 227.5
       objectReference: {fileID: 0}
     - target: {fileID: 224742922600548328, guid: 0c4c544a2de0447ea93048daf334a970,
         type: 2}
@@ -2830,6 +2846,22 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d84cccb8b5c36045b5b760f26883e7b, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1468596474 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1271797194923420, guid: 8d84cccb8b5c36045b5b760f26883e7b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1468596473}
+--- !u!114 &1468596475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1468596474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0937579dddfdd5e43b81e6ab63d9c85d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500436879 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1052793384501316, guid: 3397e4689c48b41ffb9e260dcaab583f,

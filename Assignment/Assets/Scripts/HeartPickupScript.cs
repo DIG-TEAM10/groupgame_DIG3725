@@ -1,20 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class HeartPickupScript : MonoBehaviour {
+public class HeartPickupScript : MonoBehaviour
+{
 
-	
-    void OnTriggerEnter2D(Collider2D other)
+    public float speed;
+
+    private Rigidbody rb;
+
+    void Start()
     {
-        //Check the provided Collider2D parameter other to see if it is tagged "PickUp", if it is...
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        rb.AddForce(movement * speed);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
         if (other.gameObject.CompareTag("redheartpickuptag"))
         {
-            //... then set the other object we just collided with to inactive.
             other.gameObject.SetActive(false);
-
         }
-
-
     }
 }
