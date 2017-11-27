@@ -53,7 +53,13 @@ public class PlayerScript : MonoBehaviour
 	}
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("redheartpickuptag"))
+
+		//if (other.gameObject.CompareTag("Spike"))
+		//{
+			//fullhealth -= 25;
+		//}
+
+		if (other.gameObject.CompareTag("redheartpickuptag"))
         {
             other.gameObject.SetActive(false);
         }
@@ -64,5 +70,16 @@ public class PlayerScript : MonoBehaviour
         }
     }
 
+	public IEnumerator Knockback(float knockDur, float knockbackPwr, Vector3 knockbackDir)
+	{
+		float timer = 0;
+		while (knockDur > timer)
+		{
+			timer += Time.deltaTime;
+			rb.AddForce(new Vector3(knockbackDir.x * -10, knockbackDir.y * knockbackPwr, transform.position.z));
+		}
+
+		yield return 0;
+	}
 }
 
