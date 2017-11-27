@@ -76,7 +76,7 @@ public class PlayerScript : MonoBehaviour
 		while (knockDur > timer)
 		{
 			timer += Time.deltaTime;
-			rb.AddForce(new Vector3(knockbackDir.x * -10, knockbackDir.y * knockbackPwr, transform.position.z));
+			rb.AddForce(new Vector3(knockbackDir.x * -5, knockbackDir.y * knockbackPwr, transform.position.z));
 		}
 
 		yield return 0;
