@@ -8,11 +8,11 @@ public class WolfHealth : MonoBehaviour {
 	public int currenthealth;
 	public float sink = 2.5f;
 	public int score = 10;
-
+	public PlayerHealth damage;
 
 	Animator a;
 
-	bool isDead;
+	bool isDead, isDamaged;
 	bool isSinking;
 
 	// Use this for initialization
@@ -33,12 +33,14 @@ public class WolfHealth : MonoBehaviour {
 		
 	}
 
-	public void TakeDamage (int amount, Vector3 hitPoint)
+	public void TakeDamage (int amount)
 	{
 		if (isDead) {
 			return;
 		}
 
+		isDamaged = true;
+		damage.takeDamage (amount);
 		currenthealth -= amount;
 
 		if (currenthealth <= 0) {
