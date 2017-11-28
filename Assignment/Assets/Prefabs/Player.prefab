@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1575888261716870}
   m_IsPrefabParent: 1
+--- !u!1 &1325150430699180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4037542782347634}
+  m_Layer: 0
+  m_Name: GroundCheckPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1575888261716870
 GameObject:
   m_ObjectHideFlags: 0
@@ -24,6 +39,8 @@ GameObject:
   - component: {fileID: 95601536033806146}
   - component: {fileID: 114231890011302752}
   - component: {fileID: 61031324538877004}
+  - component: {fileID: 114197733922441242}
+  - component: {fileID: 114466544216593798}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -31,6 +48,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4037542782347634
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325150430699180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.007, y: -0.128, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4493069902499624}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4493069902499624
 Transform:
   m_ObjectHideFlags: 1
@@ -38,9 +68,10 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1575888261716870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.41, y: 1.28, z: 0}
+  m_LocalPosition: {x: -25.6, y: -5.11, z: 0}
   m_LocalScale: {x: 5.1739354, y: 5.173936, z: 5.173936}
-  m_Children: []
+  m_Children:
+  - {fileID: 4037542782347634}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -106,6 +137,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114197733922441242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575888261716870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3e5c588c15e346b2a1fe1a384ba7563, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fullhealth: 100
+  currenthealth: 100
+  healthSlider: {fileID: 0}
+  damageImage: {fileID: 0}
+  damageSpeed: 5
+  flashColor: {r: 1, g: 0, b: 0.1, a: 1}
 --- !u!114 &114231890011302752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -118,7 +166,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 7
-  jumpheight: 12
+  jumpVelocity: 13.2
+  groundCheckPoint: {fileID: 4037542782347634}
+  groundCheckRadius: 0.1182695
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &114466544216593798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1575888261716870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae9f303c13959486cab07415c2634870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 6
 --- !u!212 &212752149734082384
 SpriteRenderer:
   m_ObjectHideFlags: 1

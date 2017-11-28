@@ -4,7 +4,8 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHealth : MonoBehaviour {
+public class PlayerHealth : MonoBehaviour
+{
 
 	public int fullhealth = 100;
 	public int currenthealth;
@@ -21,21 +22,17 @@ public class PlayerHealth : MonoBehaviour {
 
 
 	// Use this for initialization
-	void Start ()
+	void Start()
 	{
-		a = GetComponent <Animator> ();
-		aud = GetComponent <AudioSource> ();
+		a = GetComponent<Animator>();
+		aud = GetComponent<AudioSource>();
 		currenthealth = fullhealth;
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
-		if (isDamaged) 
-		{
-			damageImage.color = flashColor;
-		} 
-			
-		isDamaged = false;
+	void Update()
+	{
+		
 	}
 
 	public void takeDamage(int amount)
@@ -46,11 +43,11 @@ public class PlayerHealth : MonoBehaviour {
 
 		healthSlider.value = currenthealth;
 
-		print (currenthealth);
+		print(currenthealth);
 
-		if (currenthealth <= 0 && !isDead) 
+		if (currenthealth <= 0 && !isDead)
 		{
-			Death ();
+			Death();
 		}
 	}
 
@@ -58,7 +55,7 @@ public class PlayerHealth : MonoBehaviour {
 	{
 		isDead = true;
 
-		a.SetTrigger ("Die");
+		a.SetTrigger("Die");
 
 	}
 }

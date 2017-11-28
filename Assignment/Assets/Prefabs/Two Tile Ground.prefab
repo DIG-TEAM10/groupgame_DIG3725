@@ -22,9 +22,9 @@ GameObject:
   - component: {fileID: 212433240099848738}
   - component: {fileID: 50102196827941212}
   - component: {fileID: 61499559813986122}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Two Tile Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,9 +40,9 @@ GameObject:
   - component: {fileID: 212698673747849134}
   - component: {fileID: 50804649791492664}
   - component: {fileID: 61931420937212028}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground Middle (23)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1221299231931064}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 26, y: 0, z: 0}
+  m_LocalPosition: {x: 17.604958, y: 6.419585, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4876593138772900}
