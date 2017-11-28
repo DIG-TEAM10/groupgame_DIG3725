@@ -45,7 +45,11 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 64
+=======
+  controlID: 63
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -209,7 +213,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 65
+=======
+  controlID: 64
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -233,7 +241,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 66
+=======
+  controlID: 23
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -334,10 +346,17 @@ MonoBehaviour:
   m_LastProjectPath: /Users/ThomasField/Desktop/DIG3725/groupgame_DIG3725/Assignment
   m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 19}
     m_SelectedIDs: 222c0000
     m_LastClickedID: 11298
     m_ExpandedIDs: 0000000020260000d42b0000ffffff7f
+=======
+    scrollPos: {x: 0, y: 29}
+    m_SelectedIDs: 842b0000
+    m_LastClickedID: 11140
+    m_ExpandedIDs: 0000000004260000ba2b000000ca9a3bffffff7f
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -365,7 +384,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 0000000020260000d42b0000
+=======
+    m_ExpandedIDs: 0000000004260000ba2b0000
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -481,9 +504,15 @@ MonoBehaviour:
     height: 406
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 2e91f6ff
     m_LastClickedID: -618194
     m_ExpandedIDs: 6ca1f6fff05afbffb28afcff44b9fcff0cbbfcffa2cefcff5ed3fcff24d4fcffcae1fcffcee1fcff7cebfcffa6eefcffaaeefcffb4eefcff2e1cfdff4424fdfff424fdff9e32fdff6844fdff7044fdff9847fdffa047fdffae47fdff3a8afdfff2a2fdffc2c1fdff88c2fdff2ed0fdfff4e1fdfff8e1fdff1ce5fdff20e5fdff2ae5fdffc008feff8809feffb865feffec82feffe48bfeff8aa3feff16affeff8ebcfeff46befeff5ce5feffe0f0feffe610ffff9e12ffff0a4bffffda4bffff7c59ffff406bffffee74ffff2478ffff2c78ffff3478ffff9a95ffff0099ffffc899ffff76a4ffffaca7ffffb4a7ffffbea7ffffecb7ffff1cbdffff82cdffff66d8ffff1afcffff00000000
+=======
+    m_SelectedIDs: 7c2b0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: f0f8fffff2f9ffff1afcffff00000000
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,7 +531,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-  - Tutorial
+  - SquirrelLevel
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -614,10 +643,17 @@ MonoBehaviour:
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
+<<<<<<< HEAD
     m_HBaseRangeMin: -183
     m_HBaseRangeMax: 183
     m_VBaseRangeMin: -97.25
     m_VBaseRangeMax: 97.25
+=======
+    m_HBaseRangeMin: -766
+    m_HBaseRangeMax: 766
+    m_VBaseRangeMin: -386.5
+    m_VBaseRangeMax: 386.5
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -634,25 +670,44 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 732
       height: 389
     m_Scale: {x: 2, y: 2}
     m_Translation: {x: 366, y: 194.5}
+=======
+      width: 1532
+      height: 773
+    m_Scale: {x: 1, y: 1}
+    m_Translation: {x: 766, y: 386.5}
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -183
       y: -97.25
       width: 366
       height: 194.5
+=======
+      x: -766
+      y: -386.5
+      width: 1532
+      height: 773
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
     m_MinimalGUI: 1
-  m_defaultScale: 2
+  m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
+<<<<<<< HEAD
   m_CurrentColorSpace: 0
   m_LastWindowPixelSize: {x: 1464, y: 812}
+=======
+  m_CurrentColorSpace: 1
+  m_LastWindowPixelSize: {x: 1532, y: 790}
+>>>>>>> 90fd37d90c55967b5e87be1fef4af6c1865faafb
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
