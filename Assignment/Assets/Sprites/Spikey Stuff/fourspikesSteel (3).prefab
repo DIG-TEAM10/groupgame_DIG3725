@@ -20,6 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4028815406656456}
   - component: {fileID: 212558113206106176}
+  - component: {fileID: 114347537576992966}
+  - component: {fileID: 50252343918234644}
+  - component: {fileID: 114202924509771024}
+  - component: {fileID: 61388470485593932}
   m_Layer: 0
   m_Name: fourspikesSteel (3)
   m_TagString: Untagged
@@ -34,12 +38,87 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1210788149374360}
   m_LocalRotation: {x: -0, y: -0, z: -0.99982274, w: 0.018827587}
-  m_LocalPosition: {x: 12.44, y: -9.38, z: 0}
+  m_LocalPosition: {x: 12.54603, y: -12.486517, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -177.84201}
+--- !u!50 &50252343918234644
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210788149374360}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61388470485593932
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210788149374360}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.57, y: 1.47}
+    newSize: {x: 0.57, y: 1.47}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.57, y: 1.47}
+  m_EdgeRadius: 0
+--- !u!114 &114202924509771024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210788149374360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c97abf4549fd47d39f069d2c05cfac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacktime: 0.5
+  damage: 10
+  pHealth: {fileID: 0}
+  ph: {fileID: 0}
+--- !u!114 &114347537576992966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1210788149374360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c97abf4549fd47d39f069d2c05cfac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attacktime: 0.5
+  damage: 10
+  pHealth: {fileID: 0}
+  ph: {fileID: 0}
 --- !u!212 &212558113206106176
 SpriteRenderer:
   m_ObjectHideFlags: 1
