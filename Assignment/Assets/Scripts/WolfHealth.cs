@@ -9,6 +9,9 @@ public class WolfHealth : MonoBehaviour {
 	public float sink = 2.5f;
 	public int score = 10;
 	public PlayerHealth damage;
+	GameObject wolf;
+	public Rect barposition, position;
+	public Texture2D health, bar;
 
 	Animator a;
 
@@ -22,6 +25,10 @@ public class WolfHealth : MonoBehaviour {
 		currenthealth = fullhealth;
 		
 	}
+
+
+
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -30,6 +37,9 @@ public class WolfHealth : MonoBehaviour {
 
 			transform.Translate (-Vector3.up * sink * Time.deltaTime);
 		}
+
+		transform.position = new Vector3 (wolf.transform.position.x, wolf.transform.position.y);
+		Debug.Log (transform.position);
 		
 	}
 
@@ -47,6 +57,13 @@ public class WolfHealth : MonoBehaviour {
 			Death ();
 		}
 	}
+
+	void OnGUI()
+	{
+		GUI.DrawTexture (barposition, bar);
+
+	}
+
 
 	void Death()
 	{

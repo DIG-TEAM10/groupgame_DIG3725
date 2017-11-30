@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 
 
-public class NewBehaviourScript : MonoBehaviour {
+public class JumpAttack : MonoBehaviour {
 
 	public int damage = 10;
 
