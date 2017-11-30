@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/SquirrelLevel.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/BirdLevel.unity
+=======
+- path: Assets/Scenes/WolfLevel.unity
+>>>>>>> 7cf311a9b5e1d907bffa2f8953220a5aa172ba45
+>>>>>>> a4dd4a062f6340bd9f6e6d7d07818631aef2a97f
   isLoaded: 1
   isActive: 1
