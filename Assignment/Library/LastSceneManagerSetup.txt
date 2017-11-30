@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/SquirrelLevel.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Tutorial.unity
+=======
+- path: Assets/Scenes/BirdLevel.unity
+>>>>>>> 038d3fb8643b952770badf3fc618bf1f177cba0b
+>>>>>>> 2236339b54b7d0d269b06cac63fe2e66c8292769
   isLoaded: 1
   isActive: 1
