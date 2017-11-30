@@ -28,7 +28,7 @@ public class FlyingSpikeScript : MonoBehaviour
 
 	}
 
-	void OnTriggerEnter2D(Collision2D other)
+	void OnCollisionEnter2D(Collision2D other)
 	{
 
 		print("check3");
