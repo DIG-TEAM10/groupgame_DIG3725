@@ -28,16 +28,17 @@ public class FlyingSpikeScript : MonoBehaviour
 
 	}
 
-	void OnCollisionEnter2D(Collision2D other)
+	void OnTriggerEnter2D(Collider2D other)
 	{
 
 		print("check3");
-		if (other.collider.CompareTag("Player"))
+		if (other.CompareTag("Player"))
 		{
 			ph.takeDamage(damage);
+
+            StartCoroutine(player.Knockback(0.02f, 150, player.transform.position));
 		}
 
-		StartCoroutine(player.Knockback(0.02f, 150, player.transform.position));
 
 	}
 
