@@ -27,7 +27,8 @@ public class HeartPickupScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("redheartpickuptag"))
         {
-            other.gameObject.SetActive(false);
+
+			other.gameObject.SetActive(false);
         }
     }
 }

@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		
+
 	}
 
 	public void takeDamage(int amount)
@@ -51,11 +51,26 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
-	void Death()
-	{
-		isDead = true;
 
-		a.SetTrigger("Die");
+	void OnTriggerEnter2D(Collider2D other)
+	{
+
+		print("hello");
+
+		if (other.gameObject.CompareTag("redheartpickuptag"))
+		{
+			currenthealth += 10;
+			healthSlider.value = currenthealth;
+
+			print("healthup");
+		}
 
 	}
+void Death()
+	{
+			isDead = true;
+
+			a.SetTrigger("Die");
+
+		}
 }

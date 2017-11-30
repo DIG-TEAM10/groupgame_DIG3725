@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Tutorial.unity
+=======
+- path: Assets/Scenes/BirdLevel.unity
+>>>>>>> 038d3fb8643b952770badf3fc618bf1f177cba0b
   isLoaded: 1
   isActive: 1
