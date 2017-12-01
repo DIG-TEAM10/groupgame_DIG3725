@@ -29,6 +29,10 @@ public class RestartWolf : MonoBehaviour
             SceneManager.LoadScene("WolfLevel");
         }
 
+        if(other.CompareTag("NextLevel"))
+        {
+            SceneManager.LoadScene("PorcupineLevel");
+        }
 
     }
 }

@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 50298868216936472}
   - component: {fileID: 58944200104007626}
   - component: {fileID: 114228253215196334}
-  - component: {fileID: 114492346949120054}
+  - component: {fileID: 114380081835810722}
   m_Layer: 0
   m_Name: acorn
   m_TagString: Untagged
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ceeec9f77aaa0b84687b6d21df704863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114492346949120054
+--- !u!114 &114380081835810722
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1185307891551750}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03f4f202b6858fe41a15f6a76fe398b1, type: 3}
+  m_Script: {fileID: 11500000, guid: bbf71a627abaa404087f7b334740a5f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   attacktime: 0.5

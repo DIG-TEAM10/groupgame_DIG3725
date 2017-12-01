@@ -29,6 +29,10 @@ public class PorcupineRestart : MonoBehaviour
             SceneManager.LoadScene("PorcupineLevel");
         }
 
+        if(other.CompareTag("NextLevel"))
+        {
+            SceneManager.LoadScene("BirdLevel");
+        }
 
     }
 }
