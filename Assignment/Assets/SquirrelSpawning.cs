@@ -16,7 +16,7 @@ public class SquirrelSpawning : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (counter > 60)
+        if (counter > 200)
         {
             GameObject newacorn = Instantiate(acorn, transform.position, Quaternion.identity);
             counter = 0;
