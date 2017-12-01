@@ -20,7 +20,7 @@ public class SquirrelSpawning : MonoBehaviour {
         {
             GameObject newacorn = Instantiate(acorn, transform.position, Quaternion.identity);
             counter = 0;
-            newacorn.GetComponent<Rigidbody2D>().velocity = new Vector2(-5f, 0);
+            newacorn.GetComponent<Rigidbody2D>().velocity = new Vector2(-2f, 0);
         }
 
         counter++;
