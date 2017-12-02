@@ -79,7 +79,12 @@ public float WaitTime = 1.0f;
 
 				print("healthup");
 			}
-   }
+        }
+
+        if (other.gameObject.CompareTag("acorn"))
+        {
+            currenthealth-=10;
+        }
  }
  
 
