@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114380081835810722}
   m_Layer: 0
   m_Name: acorn
-  m_TagString: Untagged
+  m_TagString: acorn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -55,14 +55,14 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 3
+  m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_AngularDrag: 0
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!58 &58944200104007626
 CircleCollider2D:
@@ -78,7 +78,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.7499999
+  m_Radius: 1.75
 --- !u!114 &114228253215196334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1185307891551750}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bbf71a627abaa404087f7b334740a5f1, type: 3}
   m_Name: 
