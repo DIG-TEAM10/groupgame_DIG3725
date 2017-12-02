@@ -844,6 +844,7 @@ GameObject:
   - component: {fileID: 1448866467}
   - component: {fileID: 1448866466}
   - component: {fileID: 1448866471}
+  - component: {fileID: 1448866472}
   - component: {fileID: 1448866465}
   - component: {fileID: 1448866464}
   - component: {fileID: 1448866463}
@@ -1042,6 +1043,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1448866464}
   restartDelay: 5
+--- !u!114 &1448866472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1448866462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfec8d0b226c74a2185fcc94bc19fe21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1458210305
 Prefab:
   m_ObjectHideFlags: 0

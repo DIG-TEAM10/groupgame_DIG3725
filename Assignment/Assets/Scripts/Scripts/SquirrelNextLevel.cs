@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Restart : MonoBehaviour {
+public class SquirrelNextLevel : MonoBehaviour {
 
     //when player hits platform restart level
 
@@ -18,14 +18,7 @@ public class Restart : MonoBehaviour {
 	}
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
-        print("hello3");
-        if (other.CompareTag("Restart"))
-        {
-
-            SceneManager.LoadScene("SquirrelLevel");
-        }
-        
+	{
         if(other.CompareTag("NextLevel"))
         {
             SceneManager.LoadScene("WolfLevel");

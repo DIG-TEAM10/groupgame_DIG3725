@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartBird : MonoBehaviour
+public class BirdNextLevel : MonoBehaviour
 {
 
 	//when player hits platform restart level
@@ -22,13 +22,6 @@ public class RestartBird : MonoBehaviour
 
 	private void OnTriggerEnter2D(Collider2D other)
 	{
-		print("hello3");
-		if (other.CompareTag("Restart"))
-		{
-
-			SceneManager.LoadScene("BirdLevel");
-		}
-
 
 	}
 }

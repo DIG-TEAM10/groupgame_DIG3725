@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class RestartWolf : MonoBehaviour
+public class PorcupineNextLevel : MonoBehaviour
 {
 
     //when player hits platform restart level
@@ -21,17 +21,10 @@ public class RestartWolf : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other)
-    {
-        print("hello3");
-        if (other.CompareTag("Restart"))
-        {
-
-            SceneManager.LoadScene("WolfLevel");
-        }
-
+	{
         if(other.CompareTag("NextLevel"))
         {
-            SceneManager.LoadScene("PorcupineLevel");
+            SceneManager.LoadScene("BirdLevel");
         }
 
     }
