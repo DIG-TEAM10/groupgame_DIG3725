@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -13,13 +14,23 @@ public class PlayerHealth : MonoBehaviour
 	public Image damageImage;
 	public float damageSpeed = 5f;
 	public Color flashColor = new Color(1f, 0f, 0.1f);
-
+public float WaitTime = 1.0f;
+	GameObject player;
 
 	Animator a;
 	AudioSource aud;
 	bool isDead;
 	bool isDamaged;
+	PlayerScript playerScript;
 
+
+
+//IEnumerator Reset(float Count)
+//{
+	//yield return new WaitForSeconds(Count); //Count is the amount of time in seconds that you want to wait.
+											//And here goes your method of resetting the game...
+//int scene = SceneManager.GetActiveScene().buildIndex;
+//SceneManager.LoadScene(scene, LoadSceneMode.Single); }
 
 	// Use this for initialization
 	void Start()
@@ -27,6 +38,8 @@ public class PlayerHealth : MonoBehaviour
 		a = GetComponent<Animator>();
 		aud = GetComponent<AudioSource>();
 		currenthealth = fullhealth;
+		player = GameObject.FindGameObjectWithTag ("Player");
+		playerScript = GetComponent<PlayerScript> ();
 	}
 
 	// Update is called once per frame
@@ -59,18 +72,27 @@ public class PlayerHealth : MonoBehaviour
 
 		if (other.gameObject.CompareTag("redheartpickuptag"))
 		{
-			currenthealth += 10;
-			healthSlider.value = currenthealth;
+			if (currenthealth < 100)
+			{
+				currenthealth += 10;
+				healthSlider.value = currenthealth;
 
-			print("healthup");
-		}
+				print("healthup");
+			}
+   }
+ }
+ 
 
-	}
 void Death()
 	{
-			isDead = true;
+		isDead = true;
 
-			a.SetTrigger("Die");
+		a.SetTrigger("Die");
+
+		playerScript.enabled = false;
+
+        //StartCoroutine("Reset", WaitTime);
+
 
 		}
 }

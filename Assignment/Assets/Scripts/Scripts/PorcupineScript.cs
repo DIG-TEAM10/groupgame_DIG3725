@@ -33,7 +33,7 @@ public class PorcupineScript : MonoBehaviour {
 
 
 
-		if (Random.value > .99)
+		if (Random.value > .991)
 		{
 			GameObject SpawnSpike = Instantiate(Spike, transform.position, Quaternion.Euler(0,0,90));
 				SpawnSpike.GetComponent<Rigidbody2D>().velocity = new Vector2(-10, 0);
