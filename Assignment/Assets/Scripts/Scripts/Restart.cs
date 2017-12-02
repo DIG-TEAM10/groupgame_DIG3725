@@ -26,7 +26,10 @@ public class Restart : MonoBehaviour {
             SceneManager.LoadScene("SquirrelLevel");
         }
         
-
+        if(other.CompareTag("NextLevel"))
+        {
+            SceneManager.LoadScene("WolfLevel");
+        }
     }
 }
 
