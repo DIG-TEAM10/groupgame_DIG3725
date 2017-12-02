@@ -85,6 +85,12 @@ public float WaitTime = 1.0f;
         {
             currenthealth-=10;
         }
+
+		 if (other.CompareTag("Restart"))
+        {
+
+            currenthealth = 0;
+        }
  }
  
 
