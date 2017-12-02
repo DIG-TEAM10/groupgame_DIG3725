@@ -14,6 +14,12 @@ public class GoldCoinScript : MonoBehaviour {
 
         }
 
+		else if (other.gameObject.CompareTag("NextLevel"))
+        {
+            //... then set the other object we just collided with to inactive.
+            other.gameObject.SetActive(false);
+
+        }
 
     }
 }
