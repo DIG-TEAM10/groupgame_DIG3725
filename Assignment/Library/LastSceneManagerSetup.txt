@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/WolfLevel.unity
-=======
-- path: Assets/Scenes/Tutorial.unity
->>>>>>> dd7517fdd93e5df0fd1da23c00f8d11a1a5c4e3e
+- path: Assets/Scenes/BirdLevel.unity
   isLoaded: 1
   isActive: 1

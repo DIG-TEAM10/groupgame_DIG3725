@@ -5,10 +5,16 @@ using UnityEngine;
 public class BirdAttack : MonoBehaviour
 {
 
+public bool isLeft = true;
+
+public GameObject bullet;
+public Transform target;
+	public Transform shootpointLeft; 
+
 	// Use this for initialization
 	void Start()
 	{
-
+	//curhealth = maxhealth;
 	}
 
 	// Update is called once per frame
@@ -19,9 +25,9 @@ public class BirdAttack : MonoBehaviour
 
 	public void Attack(bool attackingLeft)
 	{
-		bulletTimer += Time.deltaTime;
+		//bulletTimer += Time.deltaTime;
 
-		if (bulletTimer >= shootInterval)
+		//if (bulletTimer >= shootInterval)
 		{
 
 			Vector2 direction = target.transform.position - transform.position;
@@ -31,10 +37,10 @@ public class BirdAttack : MonoBehaviour
 			{
 
 				GameObject bulletClone;
-				bulletClone = Instantiate(bulletClone, shootPointLeft.transform.position, shootPointLeft.transform.rotation as gameObject);
-				bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
+				//bulletClone = Instantiate(bulletClone, shootPointLeft.transform.position, shootPointLeft.transform.rotation as gameObject);
+				//bulletClone.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
 
-				bulletTimer = 0;
+				//bulletTimer = 0;
 
 			}
 		}
