@@ -84,6 +84,7 @@ public float WaitTime = 1.0f;
         if (other.gameObject.CompareTag("acorn"))
         {
             currenthealth-=10;
+			healthSlider.value = currenthealth;
         }
 
 		 if (other.CompareTag("Restart"))

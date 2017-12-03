@@ -61,7 +61,9 @@ public class PlayerScript : MonoBehaviour
 
 		if (other.gameObject.CompareTag("redheartpickuptag"))
         {
-            other.gameObject.SetActive(false);
+            
+
+			other.gameObject.SetActive(false);
         }
 
         if(other.gameObject.CompareTag("goldcoinpickuptag"))

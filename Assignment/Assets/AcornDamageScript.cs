@@ -35,9 +35,10 @@ public class AcornDamageScript : MonoBehaviour
         if (other.collider.CompareTag("Player"))
         {
             ph.takeDamage(damage);
+
+             StartCoroutine(player.Knockback(0.02f, 150, player.transform.position));
         }
 
-        //StartCoroutine(player.Knockback(0.02f, 150, player.transform.position));
 
     }
 
