@@ -26,7 +26,7 @@ public class Sign1Script1 : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("sign1"))
         {
