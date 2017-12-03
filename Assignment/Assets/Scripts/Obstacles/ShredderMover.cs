@@ -19,7 +19,7 @@ public class ShredderMover : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		if (transform.position.y >= 42)
+		if (transform.position.y >= 48.5)
 		{
 			movement = new Vector3(0f, 0f);
 		}
