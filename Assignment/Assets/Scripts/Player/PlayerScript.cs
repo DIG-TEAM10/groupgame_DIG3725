@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -15,11 +16,18 @@ public class PlayerScript : MonoBehaviour
 	public LayerMask groundLayer;
 	public static bool IsInputEnabled = true;
 
+    private int goldcoinnum;
+    public Text goldcoinnumText;
+    
+
 
 	void Start()
 	{
 		my_animator = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
+
+        goldcoinnum = 0;
+        SetgoldcoinnumText();
 	}
 
 	void Update()
@@ -69,6 +77,8 @@ public class PlayerScript : MonoBehaviour
         if(other.gameObject.CompareTag("goldcoinpickuptag"))
         {
             other.gameObject.SetActive(false);
+            goldcoinnum = goldcoinnum + 1;
+            SetgoldcoinnumText();
         }
     }
 
@@ -83,5 +93,10 @@ public class PlayerScript : MonoBehaviour
 
 		yield return 0;
 	}
+
+    void SetgoldcoinnumText()
+    {
+        goldcoinnumText.text = "Gold Coins: " + goldcoinnum.ToString();
+    }
 }
 
