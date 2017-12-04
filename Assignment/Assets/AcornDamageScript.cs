@@ -31,12 +31,11 @@ public class AcornDamageScript : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
 
-        print("check2");
         if (other.collider.CompareTag("Player"))
         {
             ph.takeDamage(damage);
 
-             StartCoroutine(player.Knockback(0.02f, 150, player.transform.position));
+             StartCoroutine(player.Knockback(0.02f, 50, player.transform.position));
         }
 
 
