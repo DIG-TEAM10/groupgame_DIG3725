@@ -12,14 +12,14 @@ public class ShredderMover : MonoBehaviour
 	void Start()
 	{
 
-		movement = new Vector3(0f, .025f);
+		movement = new Vector3(0f, .030f);
 
 	}
 
 	// Update is called once per frame
 	void Update()
 	{
-		if (transform.position.y >= 48.5)
+		if (transform.position.y >= 46.2)
 		{
 			movement = new Vector3(0f, 0f);
 		}

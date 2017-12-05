@@ -56,7 +56,7 @@ public Slider pHealth;
 		ph.takeDamage(damage);
 	}
 
-	StartCoroutine(player.Knockback(0.02f, 150, player.transform.position));	 
+	StartCoroutine(player.Knockback(0.02f, 25, player.transform.position));	 
 	} 
 
 	}
