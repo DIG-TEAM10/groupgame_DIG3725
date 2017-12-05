@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 
 
+public class JumpAttack : MonoBehaviour {
 
 	public new int playerdamage = 10;
 

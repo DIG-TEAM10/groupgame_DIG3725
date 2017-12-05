@@ -1,4 +1,10 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/WolfLevel.unity
   isLoaded: 1
   isActive: 1
+=======
+- path: Assets/Scenes/Tutorial.unity
+  isLoaded: 0
+  isActive: 0
+>>>>>>> 9950af2eaf1cf99319e1951604a243566f2b6eac
