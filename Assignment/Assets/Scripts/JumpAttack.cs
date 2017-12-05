@@ -6,22 +6,27 @@ using UnityEngine.UI;
 
 
 
-public class JumpAttack : MonoBehaviour {
+public class JumpAttack : WolfHealth {
 
 	public int damage = 10;
 
 	public WolfHealth wh;
-	GameObject player;
+	GameObject player, wolf;
 	public Slider wHealth;
 	bool inRange;
 	float timer;
+	float x;
+	float y;
 
 
 	// Use this for initialization
 	void Start () {
-		wh = GetComponent<WolfHealth> ();
+		wolf = GameObject.FindGameObjectWithTag ("WolfEnemy");
+		wh = wolf.GetComponent<WolfHealth> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
-
+	
+		y = Input.GetAxis ("Vertical");
+		x = Input.GetAxis ("Horizontal");
 
 	}
 	
@@ -34,9 +39,10 @@ public class JumpAttack : MonoBehaviour {
 	{
 
 		print ("check2");
-		if (other.collider.CompareTag("Wolf")) {
+		if (other.collider.CompareTag("WolfEnemy")) {
 			inRange = true;
 			wh.TakeDamage (damage);
+			print ("wolfDamaged");
 		}
 	}
 

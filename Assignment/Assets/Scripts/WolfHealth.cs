@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WolfHealth : MonoBehaviour {
 
-	public int fullhealth = 100;
+	public int fullhealth = 10;
+	public float startspeed = 10f;
+
+	[HideInInspector]
+	public float speed;
 	public int currenthealth;
 	public float sink = 2.5f;
-	public int score = 10;
-	public PlayerHealth damage;
-	GameObject wolf;
+	public int damage = 10;
+	GameObject death;
+	[Header("Unity")]
+	public Image healthstuff;
 	public Rect barposition, position;
 	public Texture2D health, bar;
 
@@ -38,24 +45,40 @@ public class WolfHealth : MonoBehaviour {
 			transform.Translate (-Vector3.up * sink * Time.deltaTime);
 		}
 
-		transform.position = new Vector3 (wolf.transform.position.x, wolf.transform.position.y);
+		transform.position = new Vector3 (death.transform.position.x, death.transform.position.y);
 		Debug.Log (transform.position);
 		
 	}
 
 	public void TakeDamage (int amount)
 	{
-		if (isDead) {
-			return;
-		}
-
 		isDamaged = true;
-		damage.takeDamage (amount);
-		currenthealth -= amount;
 
-		if (currenthealth <= 0) {
-			Death ();
+		currenthealth -= amount;
+	
+		healthstuff.fillAmount = currenthealth;
+
+		print(currenthealth);
+
+		if (currenthealth <= 0 && !isDead)
+		{
+			Death();
 		}
+	}
+
+	void OnTriggerEnter2D(Collider2D other)
+	{
+
+		print("hello");
+
+		if (other.gameObject.CompareTag("Player"))
+		{
+			currenthealth -= 10;
+			healthstuff.fillAmount = currenthealth;
+
+			print("wolf damaged");
+		}
+
 	}
 
 	void OnGUI()
@@ -70,6 +93,7 @@ public class WolfHealth : MonoBehaviour {
 		isDead = true;
 
 		a.SetTrigger ("Die");
+		startSinking ();
 
 	}
 

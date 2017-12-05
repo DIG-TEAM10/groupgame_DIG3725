@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
 
 	public int fullhealth = 100;
 	public int currenthealth;
+	GameObject player;
+	Rigidbody2D rb;
 	public Slider healthSlider;
 	public Image damageImage;
 	public float damageSpeed = 5f;
@@ -24,6 +26,7 @@ public class PlayerHealth : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		player = GameObject.FindGameObjectWithTag ("Player");
 		a = GetComponent<Animator>();
 		aud = GetComponent<AudioSource>();
 		currenthealth = fullhealth;
@@ -44,6 +47,8 @@ public class PlayerHealth : MonoBehaviour
 		healthSlider.value = currenthealth;
 
 		print(currenthealth);
+
+		print ("taking damage");
 
 		if (currenthealth <= 0 && !isDead)
 		{
