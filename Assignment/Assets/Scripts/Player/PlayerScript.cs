@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour
 	public float groundCheckRadius;
 	public LayerMask groundLayer;
 	public static bool IsInputEnabled = true;
+    public PlayerHealth ph;
 
     private int goldcoinnum;
     public Text goldcoinnumText;
@@ -25,6 +26,7 @@ public class PlayerScript : MonoBehaviour
 	{
 		my_animator = GetComponent<Animator>();
 		rb = GetComponent<Rigidbody2D>();
+		ph = GetComponent<PlayerHealth>();
 
         goldcoinnum = 0;
         SetgoldcoinnumText();
@@ -68,9 +70,12 @@ public class PlayerScript : MonoBehaviour
 		//}
 
 		if (other.gameObject.CompareTag("redheartpickuptag"))
-        {
-            
-
+		{
+			if (ph.currenthealth >= 100)
+			{
+				goldcoinnum = goldcoinnum + 5;
+				SetgoldcoinnumText();
+			}
 			other.gameObject.SetActive(false);
         }
 
