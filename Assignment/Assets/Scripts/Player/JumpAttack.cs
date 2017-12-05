@@ -6,17 +6,17 @@ using UnityEngine.UI;
 
 
 
-public class JumpAttack : WolfHealth {
 
-	public int damage = 10;
+	public new int playerdamage = 10;
 
 	public WolfHealth wh;
 	GameObject player, wolf;
-	public Slider wHealth;
+	public PlayerHealth ph;
+	public Slider enemyhealth;
 	bool inRange;
+	public float attacktime = 0.5f;
 	float timer;
-	float x;
-	float y;
+	Animator a;
 
 
 	// Use this for initialization
@@ -24,15 +24,30 @@ public class JumpAttack : WolfHealth {
 		wolf = GameObject.FindGameObjectWithTag ("WolfEnemy");
 		wh = wolf.GetComponent<WolfHealth> ();
 		player = GameObject.FindGameObjectWithTag ("Player");
+		ph = player.GetComponent<PlayerHealth> ();
+		a = GetComponent <Animator> ();
 	
-		y = Input.GetAxis ("Vertical");
-		x = Input.GetAxis ("Horizontal");
-
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
+		float x = Input.GetAxis ("Horizontal");
+		float y = Input.GetAxis ("Vertical");
+
+		transform.Translate (new Vector2 (x, y) * Time.deltaTime);
+
+		timer += Time.deltaTime;
+		if (timer >= attacktime && inRange && ph.currenthealth > 0) {
+
+			Attack ();
+		}
+
+		if (wh.currenthealth <= 0) {
+
+			a.SetTrigger ("WolfDead");
+		}
+
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
@@ -41,7 +56,7 @@ public class JumpAttack : WolfHealth {
 		print ("check2");
 		if (other.collider.CompareTag("WolfEnemy")) {
 			inRange = true;
-			wh.TakeDamage (damage);
+			wh.TakeDamage (playerdamage);
 			print ("wolfDamaged");
 		}
 	}
@@ -51,6 +66,19 @@ public class JumpAttack : WolfHealth {
 		if (other.gameObject == player) {
 			inRange = false;
 		}
+	}
+
+	void Attack()
+	{
+		timer = 0f;
+
+		if (wh.currenthealth > 0) {
+
+			wh.TakeDamage (playerdamage);
+			enemyhealth.value -= 10;
+		}
+
+
 	}
 
 }

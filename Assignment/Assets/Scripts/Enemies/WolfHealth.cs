@@ -18,7 +18,7 @@ public class WolfHealth : MonoBehaviour {
 	[Header("Unity")]
 	public Image healthstuff;
 	public Rect barposition, position;
-	public Texture2D health, bar;
+	public Slider bar;
 
 	Animator a;
 
@@ -81,11 +81,6 @@ public class WolfHealth : MonoBehaviour {
 
 	}
 
-	void OnGUI()
-	{
-		GUI.DrawTexture (barposition, bar);
-
-	}
 
 
 	void Death()
