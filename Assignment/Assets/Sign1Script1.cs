@@ -8,15 +8,19 @@ using UnityEngine.SceneManagement;
 
 public class Sign1Script1 : MonoBehaviour
 {
-    private GameObject popUp;
+  //  private GameObject popUp;
 
 
     // Use this for initialization
     void Start()
     {
 
-
-
+       /* if (gameObject.CompareTag("Player"))
+        {
+            popUp = GameObject.Find("Panel");
+            popUp.SetActive(true);
+        }
+        */
     }
 
     // Update is called once per frame
@@ -26,13 +30,5 @@ public class Sign1Script1 : MonoBehaviour
     }
 
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("sign1"))
-        {
-            popUp = GameObject.Find("Panel");
-            popUp.SetActive(true);
-        }
-
-    }
+  
 }
