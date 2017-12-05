@@ -2293,6 +2293,7 @@ MonoBehaviour:
   ph: {fileID: 0}
   coinpickup: {fileID: 0}
   goldcoinnumText: {fileID: 1458210306}
+  canMove: 1
 --- !u!95 &1448866467
 Animator:
   serializedVersion: 3
