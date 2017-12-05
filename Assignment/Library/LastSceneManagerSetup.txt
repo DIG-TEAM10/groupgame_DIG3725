@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/PorcupineLevel.unity
+- path: Assets/Scenes/SquirrelLevel.unity
   isLoaded: 1
   isActive: 1
