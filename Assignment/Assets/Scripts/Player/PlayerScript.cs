@@ -19,6 +19,8 @@ public class PlayerScript : MonoBehaviour
 	public AudioClip coinpickup;
     private int goldcoinnum;
     public Text goldcoinnumText;
+
+    public bool canMove;
     
 
 
@@ -34,9 +36,19 @@ public class PlayerScript : MonoBehaviour
 
 	void Update()
 	{
-		isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
+
+        if (!canMove)
+        {
+            return;
+        }
+
+        isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 		float moveHorizontal = Input.GetAxis("Horizontal");
 		transform.position += new Vector3(moveHorizontal, 0f, 0f) * Time.deltaTime * speed;
+
+        
+
+
 
 		if (Input.GetKeyDown(KeyCode.Space) && isTouchingGround)
 		{
