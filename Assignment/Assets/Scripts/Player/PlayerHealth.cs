@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
 	public float damageSpeed = 5f;
 	public Color flashColor = new Color(1f, 0f, 0.1f);
 public float WaitTime = 1.0f;
-	GameObject player;
+
 
 	Animator a;
 	AudioSource aud;
