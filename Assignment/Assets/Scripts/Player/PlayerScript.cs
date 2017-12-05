@@ -16,7 +16,7 @@ public class PlayerScript : MonoBehaviour
 	public LayerMask groundLayer;
 	public static bool IsInputEnabled = true;
     public PlayerHealth ph;
-
+	public AudioClip coinpickup;
     private int goldcoinnum;
     public Text goldcoinnumText;
     
@@ -64,11 +64,6 @@ public class PlayerScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-		//if (other.gameObject.CompareTag("Spike"))
-		//{
-			//fullhealth -= 25;
-		//}
-
 		if (other.gameObject.CompareTag("redheartpickuptag"))
 		{
 			if (ph.currenthealth >= 100)
@@ -81,7 +76,9 @@ public class PlayerScript : MonoBehaviour
 
         if(other.gameObject.CompareTag("goldcoinpickuptag"))
         {
-            other.gameObject.SetActive(false);
+			print("hello1");
+			//AudioSource.PlayClipAtPoint(coinpickup, transform.position);
+			other.gameObject.SetActive(false);
             goldcoinnum = goldcoinnum + 1;
             SetgoldcoinnumText();
         }

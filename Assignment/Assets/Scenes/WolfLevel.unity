@@ -421,6 +421,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ph: {fileID: 0}
+  coinpickup: {fileID: 8300000, guid: 721f57c9f9b6bce48ac30d56da175696, type: 3}
   goldcoinnumText: {fileID: 179151591}
 --- !u!95 &77871812
 Animator:
@@ -512,7 +513,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 77871805}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.2, y: -8.1, z: 0}
+  m_LocalPosition: {x: 119, y: 10.2, z: 0}
   m_LocalScale: {x: 5.1739354, y: 5.173936, z: 5.173936}
   m_Children:
   - {fileID: 2112147055}
@@ -3780,7 +3781,7 @@ Prefab:
     - target: {fileID: 114695218592578516, guid: c5b70b9b532824bd6b9269dc6c163915,
         type: 2}
       propertyPath: wolfspeed
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 61451636669784958, guid: c5b70b9b532824bd6b9269dc6c163915, type: 2}
@@ -5046,7 +5047,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -5100,7 +5101,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
