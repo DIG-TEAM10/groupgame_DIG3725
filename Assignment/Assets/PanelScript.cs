@@ -13,7 +13,7 @@ public class PanelScript : MonoBehaviour
     void Start()
     {
         popUp = GameObject.Find("Panel");
-        popUp.SetActive(true);
+        //popUp.SetActive(true);
 
         if (Input.GetKeyDown(KeyCode.KeypadEnter))
         {

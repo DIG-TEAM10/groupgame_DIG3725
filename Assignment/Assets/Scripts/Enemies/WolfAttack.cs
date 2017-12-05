@@ -13,7 +13,7 @@ public class WolfAttack : MonoBehaviour {
 	GameObject player;
 	public Slider pHealth;
 	public PlayerHealth ph;
-	WolfHealth wh;
+	public WolfHealth wh;
 	bool inRange;
 	float timer;
 
@@ -25,7 +25,7 @@ public class WolfAttack : MonoBehaviour {
 		ph = player.GetComponent <PlayerHealth> ();
 		wh = GetComponent <WolfHealth> ();
 		a = GetComponent <Animator> ();
-		
+
 	}
 
 	void OnCollisionEnter2D (Collision2D other)
@@ -47,6 +47,11 @@ public class WolfAttack : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+
+		float x = Input.GetAxis ("Horizontal");
+		float y = Input.GetAxis ("Vertical");
+
+		transform.Translate (new Vector2 (x, y) * Time.deltaTime);
 
 		timer += Time.deltaTime;
 		if (timer >= attacktime && inRange && wh.currenthealth > 0) {
