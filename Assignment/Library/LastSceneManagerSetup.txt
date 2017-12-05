@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Tutorial.unity
+=======
+- path: Assets/Scenes/PorcupineLevel.unity
+>>>>>>> 79e81f6329a18b78f65d2ad443e773fd5717fa46
   isLoaded: 1
   isActive: 1

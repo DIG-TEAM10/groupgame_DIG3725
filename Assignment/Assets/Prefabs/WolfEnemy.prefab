@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212242879387072626}
   - component: {fileID: 50019924805907748}
   - component: {fileID: 61451636669784958}
+  - component: {fileID: 114695218592578516}
   - component: {fileID: 95519313679612160}
   - component: {fileID: 114068709634331928}
   - component: {fileID: 114009281569439510}
@@ -157,6 +158,21 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &114695218592578516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1623168932660894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3b51e096a6f04b4b8eca20084597ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  wolfspeed: 1
 --- !u!212 &212242879387072626
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -207,7 +223,7 @@ RectTransform:
   m_GameObject: {fileID: 1623168932660894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: -2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
