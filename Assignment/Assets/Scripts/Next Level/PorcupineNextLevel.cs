@@ -24,7 +24,7 @@ public class PorcupineNextLevel : MonoBehaviour
 	{
         if(other.CompareTag("NextLevel"))
         {
-            SceneManager.LoadScene("BirdLevel");
+            SceneManager.LoadScene("VictoryScene");
         }
 
     }

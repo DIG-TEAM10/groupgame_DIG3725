@@ -6,11 +6,11 @@ public class HeartPickupScript : MonoBehaviour
 
     public float speed;
 
-    private Rigidbody rb;
+    
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+       
     }
 
     void FixedUpdate()
@@ -20,15 +20,8 @@ public class HeartPickupScript : MonoBehaviour
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
-        rb.AddForce(movement * speed);
+        
     }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("redheartpickuptag"))
-        {
-
-			other.gameObject.SetActive(false);
-        }
-    }
+    
 }

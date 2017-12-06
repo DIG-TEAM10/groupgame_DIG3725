@@ -24,7 +24,7 @@ public class WolfNextLevel : MonoBehaviour
 	{
         if(other.CompareTag("NextLevel"))
         {
-            SceneManager.LoadScene("PorcupineLevel");
+            SceneManager.LoadScene("SquirrelLevel");
         }
 
     }

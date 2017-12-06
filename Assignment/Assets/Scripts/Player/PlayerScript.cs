@@ -16,9 +16,11 @@ public class PlayerScript : MonoBehaviour
 	public LayerMask groundLayer;
 	public static bool IsInputEnabled = true;
     public PlayerHealth ph;
-
+	public AudioClip coinpickup;
     private int goldcoinnum;
     public Text goldcoinnumText;
+
+    public bool canMove;
     
 
 
@@ -34,9 +36,19 @@ public class PlayerScript : MonoBehaviour
 
 	void Update()
 	{
-		isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
+
+        if (!canMove)
+        {
+            return;
+        }
+
+        isTouchingGround = Physics2D.OverlapCircle(groundCheckPoint.position, groundCheckRadius, groundLayer);
 		float moveHorizontal = Input.GetAxis("Horizontal");
 		transform.position += new Vector3(moveHorizontal, 0f, 0f) * Time.deltaTime * speed;
+
+        
+
+
 
 		if (Input.GetKeyDown(KeyCode.Space) && isTouchingGround)
 		{
@@ -64,11 +76,6 @@ public class PlayerScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-		//if (other.gameObject.CompareTag("Spike"))
-		//{
-			//fullhealth -= 25;
-		//}
-
 		if (other.gameObject.CompareTag("redheartpickuptag"))
 		{
 			if (ph.currenthealth >= 100)
@@ -81,7 +88,9 @@ public class PlayerScript : MonoBehaviour
 
         if(other.gameObject.CompareTag("goldcoinpickuptag"))
         {
-            other.gameObject.SetActive(false);
+			print("hello1");
+			AudioSource.PlayClipAtPoint(coinpickup, transform.position);
+			other.gameObject.SetActive(false);
             goldcoinnum = goldcoinnum + 1;
             SetgoldcoinnumText();
         }

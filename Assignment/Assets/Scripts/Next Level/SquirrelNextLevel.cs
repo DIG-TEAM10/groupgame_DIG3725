@@ -21,7 +21,7 @@ public class SquirrelNextLevel : MonoBehaviour {
 	{
         if(other.CompareTag("NextLevel"))
         {
-            SceneManager.LoadScene("WolfLevel");
+            SceneManager.LoadScene("BirdLevel");
         }
     }
 }

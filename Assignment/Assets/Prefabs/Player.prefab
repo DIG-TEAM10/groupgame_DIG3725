@@ -70,7 +70,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1575888261716870}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.14, y: -2.23, z: 0}
+  m_LocalPosition: {x: -2.6579847, y: 1.5411856, z: 0}
   m_LocalScale: {x: 6.4027467, y: 7.049492, z: 5.173936}
   m_Children:
   - {fileID: 4037542782347634}
@@ -175,7 +175,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
+  ph: {fileID: 114197733922441242}
+  coinpickup: {fileID: 8300000, guid: bedf4cb31374c824db6df85515046db3, type: 3}
   goldcoinnumText: {fileID: 0}
+  canMove: 1
 --- !u!114 &114466544216593798
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -247,7 +250,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 0d2b5aa7c320e4b8aa75038208e32c64, type: 3}
+  m_Sprite: {fileID: 21300004, guid: 0d2b5aa7c320e4b8aa75038208e32c64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
