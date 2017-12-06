@@ -2291,7 +2291,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ph: {fileID: 0}
-  coinpickup: {fileID: 8300000, guid: 721f57c9f9b6bce48ac30d56da175696, type: 3}
+  coinpickup: {fileID: 8300000, guid: bedf4cb31374c824db6df85515046db3, type: 3}
   goldcoinnumText: {fileID: 1458210306}
   canMove: 1
 --- !u!95 &1448866467
