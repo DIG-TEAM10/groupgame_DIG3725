@@ -7,6 +7,20 @@ public class PorcupineScript : MonoBehaviour {
 	public GameObject Spike;
 	Vector3 movement;
 
+	public float currentHealth;
+	public Transform target;
+	public float maxHealth;
+	public float distance;
+	public float wakeRange;
+	public Animator a;
+
+	public bool awake = false;
+
+
+	void Awake()
+	{
+		a = gameObject.GetComponent<Animator> ();
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +31,11 @@ public class PorcupineScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+		a.SetBool ("Awake", awake);
+
+		RangeCheck ();
 
 		transform.position += movement;
 
@@ -39,5 +58,30 @@ public class PorcupineScript : MonoBehaviour {
 				SpawnSpike.GetComponent<Rigidbody2D>().velocity = new Vector2(-10, 0);
 		}
 
+		if (currentHealth <= 0) {
+			Destroy (gameObject);
+		}
+
 	}
+
+	void RangeCheck()
+	{
+		distance = Vector3.Distance (transform.position, target.transform.position);
+
+		if (distance < wakeRange) {
+			awake = true;
+		}
+
+		if (distance > wakeRange) {
+			awake = false;
+		}
+	}
+
+	public void Damage(int dmg)
+	{
+		currentHealth -= dmg;
+		gameObject.GetComponent<Animator> ().Play ("Player_RedFlash");
+
+	}
+
 }
