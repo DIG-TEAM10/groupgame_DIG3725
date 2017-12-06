@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class WolfHealth : MonoBehaviour {
 
-	public int fullhealth = 10;
+	public int fullhealth = 50;
 	public float startspeed = 10f;
 
 	[HideInInspector]
@@ -22,7 +22,7 @@ public class WolfHealth : MonoBehaviour {
 
 	Animator a;
 
-	bool isDead, isDamaged;
+	bool isDead;
 	bool isSinking;
 
 	// Use this for initialization
@@ -52,13 +52,9 @@ public class WolfHealth : MonoBehaviour {
 
 	public void TakeDamage (int amount)
 	{
-		isDamaged = true;
-
 		currenthealth -= amount;
 	
-		healthstuff.fillAmount = currenthealth;
-
-		print(currenthealth);
+		bar.value = currenthealth;
 
 		if (currenthealth <= 0 && !isDead)
 		{
@@ -74,7 +70,7 @@ public class WolfHealth : MonoBehaviour {
 		if (other.gameObject.CompareTag("Player"))
 		{
 			currenthealth -= 10;
-			healthstuff.fillAmount = currenthealth;
+			bar.value = currenthealth;
 
 			print("wolf damaged");
 		}

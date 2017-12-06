@@ -6,38 +6,44 @@ using UnityEngine.UI;
 
 
 
-public class JumpAttack : MonoBehaviour {
+public class MeleeAttack : MonoBehaviour {
 
-	public new int playerdamage = 10;
-
-	public WolfHealth wh;
-	GameObject player, wolf;
-	public PlayerHealth ph;
-	public Slider enemyhealth;
-	bool inRange;
 	public float attacktime = 0.5f;
-	float timer;
+	public int damage = 10;
+
 	Animator a;
+	GameObject wolf;
+	public Slider enemyHealth;
+	public PlayerHealth ph;
+	public WolfHealth wh;
+	bool inRange;
+	float timer;
 
 
-	// Use this for initialization
 	void Start () {
 		wolf = GameObject.FindGameObjectWithTag ("WolfEnemy");
 		wh = wolf.GetComponent<WolfHealth> ();
-		player = GameObject.FindGameObjectWithTag ("Player");
-		ph = player.GetComponent<PlayerHealth> ();
+		ph = GetComponent<PlayerHealth> ();
 		a = GetComponent <Animator> ();
-	
 	}
-	
-	// Update is called once per frame
+
+	void OnCollisionEnter2D (Collision2D other)
+	{
+		print ("Checking Wolf");
+		if (other.collider.CompareTag("Enemy")) {
+			inRange = true;
+			wh.TakeDamage (damage);
+		}
+	}
+
+	void exit(Collider other)
+	{
+		if (other.gameObject == wolf) {
+			inRange = false;
+		}
+	}
+
 	void Update () {
-
-		float x = Input.GetAxis ("Horizontal");
-		float y = Input.GetAxis ("Vertical");
-
-		transform.Translate (new Vector2 (x, y) * Time.deltaTime);
-
 		timer += Time.deltaTime;
 		if (timer >= attacktime && inRange && ph.currenthealth > 0) {
 
@@ -51,23 +57,6 @@ public class JumpAttack : MonoBehaviour {
 
 	}
 
-	void OnCollisionEnter2D (Collision2D other)
-	{
-
-		print ("check2");
-		if (other.collider.CompareTag("WolfEnemy")) {
-			inRange = true;
-			wh.TakeDamage (playerdamage);
-			print ("wolfDamaged");
-		}
-	}
-
-	void exit(Collider other)
-	{
-		if (other.gameObject == player) {
-			inRange = false;
-		}
-	}
 
 	void Attack()
 	{
@@ -75,8 +64,8 @@ public class JumpAttack : MonoBehaviour {
 
 		if (wh.currenthealth > 0) {
 
-			wh.TakeDamage (playerdamage);
-			enemyhealth.value -= 10;
+			wh.TakeDamage (damage);
+			enemyHealth.value -= 10;
 		}
 
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -30,7 +31,6 @@ public class WolfAttack : MonoBehaviour {
 
 	void OnCollisionEnter2D (Collision2D other)
 	{
-
 		print ("check2");
 		if (other.collider.CompareTag("Player")) {
 			inRange = true;
@@ -47,23 +47,14 @@ public class WolfAttack : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
-		float x = Input.GetAxis ("Horizontal");
-		float y = Input.GetAxis ("Vertical");
-
-		transform.Translate (new Vector2 (x, y) * Time.deltaTime);
-
 		timer += Time.deltaTime;
 		if (timer >= attacktime && inRange && wh.currenthealth > 0) {
-
 			Attack ();
 		}
-
 		if (ph.currenthealth <= 0) {
 
 			a.SetTrigger ("PlayerDead");
 		}
-		
 	}
 
 	void Attack()
