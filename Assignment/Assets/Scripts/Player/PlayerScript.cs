@@ -89,7 +89,7 @@ public class PlayerScript : MonoBehaviour
         if(other.gameObject.CompareTag("goldcoinpickuptag"))
         {
 			print("hello1");
-			//AudioSource.PlayClipAtPoint(coinpickup, transform.position);
+			AudioSource.PlayClipAtPoint(coinpickup, transform.position);
 			other.gameObject.SetActive(false);
             goldcoinnum = goldcoinnum + 1;
             SetgoldcoinnumText();

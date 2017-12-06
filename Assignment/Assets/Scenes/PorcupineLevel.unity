@@ -2365,6 +2365,11 @@ Prefab:
       propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224721525464561048, guid: 0c4c544a2de0447ea93048daf334a970,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 153
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0c4c544a2de0447ea93048daf334a970, type: 2}
   m_IsPrefabParent: 0
@@ -2549,7 +2554,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   ph: {fileID: 0}
-  coinpickup: {fileID: 0}
+  coinpickup: {fileID: 8300000, guid: 721f57c9f9b6bce48ac30d56da175696, type: 3}
   goldcoinnumText: {fileID: 1428613676}
   canMove: 1
 --- !u!95 &1504584410
