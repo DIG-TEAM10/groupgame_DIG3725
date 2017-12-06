@@ -12,6 +12,8 @@ public class MeleeAttack : MonoBehaviour {
 	private float attackTimer = 0;
 	private float attackCd = 0.3f;
 
+	public WolfEnemy w;
+	public BirdScript s;
 	public Collider2D attackTrigger;
 
 	private Animator a;
@@ -51,5 +53,7 @@ public class MeleeAttack : MonoBehaviour {
 					
 
 	}
+
+
 
 }

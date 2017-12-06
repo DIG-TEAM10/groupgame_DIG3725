@@ -95,6 +95,11 @@ public class WolfEnemy : MonoBehaviour
 		Vector2 myVel = myBody.velocity;
 		myVel.x = -myTrans.right.x * wolfspeed;
 		myBody.velocity = myVel;
+
+
+		if (currentHealth <= 0) {
+			Destroy (gameObject);
+		}
 	}
 
 
@@ -109,5 +114,12 @@ public class WolfEnemy : MonoBehaviour
 		if (distance > wakeRange) {
 			awake = false;
 		}
+	}
+
+	public void Damage(int dmg)
+	{
+		currentHealth -= dmg;
+		gameObject.GetComponent<Animator> ().Play ("Player_RedFlash");
+
 	}
 }

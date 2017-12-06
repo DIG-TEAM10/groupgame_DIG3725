@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackTrigger : MonoBehaviour {
+public class AttackTriggerWolf : MonoBehaviour {
 
-	public int dmg = 20;
+	public int dmg;
 	void OnTriggerEnter2D(Collider2D col)
 	{
 		if(col.isTrigger != true && col.CompareTag("WolfEnemy"))
-			{
-				col.SendMessageUpwards("Damage", dmg);
-			}
+		{
+			col.SendMessageUpwards("Damage", dmg);
+		}
 
 	}
 }

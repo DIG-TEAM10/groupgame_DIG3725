@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
 
+
+
 	public int fullhealth = 100;
 	public int currenthealth;
 	GameObject player;
@@ -62,6 +64,8 @@ public float WaitTime = 1.0f;
 
 		print ("taking damage");
 
+
+
 		if (currenthealth <= 0 && !isDead)
 		{
 			Death();
@@ -96,8 +100,7 @@ public float WaitTime = 1.0f;
 
             currenthealth = 0;
         }
- }
- 
+ 	}
 
 void Death()
 	{
